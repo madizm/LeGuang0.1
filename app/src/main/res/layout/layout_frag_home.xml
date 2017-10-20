@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingEnd="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="0dp"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/msg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/msg"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/cart"
+            android:id="@+id/cart"
+            android:layout_toStartOf="@id/msg"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日新楼"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/location"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/more_unfold"
+            android:id="@+id/more"
+            android:layout_toEndOf="@id/location"/>
+
+        <LinearLayout
+            android:id="@+id/searchFrame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_white_frame"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@id/more"
+            android:layout_toStartOf="@id/cart"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:src="@drawable/search" />
+
+            <EditText
+                android:id="@+id/edText_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint="搜索"
+                android:paddingStart="10dp" />
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
