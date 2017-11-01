@@ -11,10 +11,10 @@ import java.util.List;
  * @author Smile Wei
  * @since 2017/3/1.
  */
-public class ViewPagerAdapter extends FragmentPagerAdapter {
+public class AdapterViewPager extends FragmentPagerAdapter {
     private List<Fragment> fragments = new ArrayList<>();
 
-    public ViewPagerAdapter(FragmentManager fm) {
+    public AdapterViewPager(FragmentManager fm) {
         super(fm);
 
         fragments.clear();

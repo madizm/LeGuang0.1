@@ -15,7 +15,7 @@ public class FragmentCommu extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_frag_commu,container,false);
+        View view = inflater.inflate(R.layout.frag_commu,container,false);
         return view;
     }
 

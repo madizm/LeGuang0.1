@@ -15,7 +15,7 @@ public class FragmentCart extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_frag_trolley,container,false);
+        View view = inflater.inflate(R.layout.frag_cart,container,false);
         return view;
     }
 
