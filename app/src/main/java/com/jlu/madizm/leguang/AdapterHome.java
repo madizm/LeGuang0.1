@@ -95,9 +95,9 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             case HomeBase.TYPE_PLACE:
                 view = inflater.inflate(R.layout.item_place, parent, false);
                 return new PlaceHolder(view);
-            case HomeBase.TYPE_HOME_SEARCH_BAR:
-                view = inflater.inflate(R.layout.item_home_type_search,parent,false);
-                return new HomeSearchBarHolder(view);
+//            case HomeBase.TYPE_HOME_SEARCH_BAR:
+//                view = inflater.inflate(R.layout.item_home_type_search,parent,false);
+//                return new HomeSearchBarHolder(view);
             default:
                 view = inflater.inflate(R.layout.item_footer_loading, parent, false);
                 return new FooterHolder(view);
@@ -150,22 +150,23 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         } else if (viewHolder instanceof FooterHolder) {
             FooterHolder holder = (FooterHolder) viewHolder;
             holder.footerLoading.onLoad(Type.TYPE_FOOTER_FULL == list.get(position).getType());
-        }else if(viewHolder instanceof HomeSearchBarHolder){
-            HomeSearchBarHolder holder = (HomeSearchBarHolder) viewHolder;
-            holder.msg.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    ToastUtil.showShortToast(context,"msg clicked");
-                }
-            });
-            holder.searchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-                @Override
-                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                    ToastUtil.showShortToast(context, v.getText().toString());
-                    return false;
-                }
-            });
         }
+//        else if(viewHolder instanceof HomeSearchBarHolder){
+//            HomeSearchBarHolder holder = (HomeSearchBarHolder) viewHolder;
+//            holder.msg.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    ToastUtil.showShortToast(context,"msg clicked");
+//                }
+//            });
+//            holder.searchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+//                @Override
+//                public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+//                    ToastUtil.showShortToast(context, v.getText().toString());
+//                    return false;
+//                }
+//            });
+//        }
     }
 
     @Override
@@ -178,15 +179,15 @@ public class AdapterHome extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         return list.size();
     }
 
-    class HomeSearchBarHolder extends RecyclerView.ViewHolder{
-        EditText searchText;
-        Button msg;
-        public HomeSearchBarHolder(View itemView) {
-            super(itemView);
-            searchText = itemView.findViewById(R.id.edText_search);
-            msg = itemView.findViewById(R.id.msg);
-        }
-    }
+//    class HomeSearchBarHolder extends RecyclerView.ViewHolder{
+//        EditText searchText;
+//        Button msg;
+//        public HomeSearchBarHolder(View itemView) {
+//            super(itemView);
+//            searchText = itemView.findViewById(R.id.edText_search);
+//            msg = itemView.findViewById(R.id.msg);
+//        }
+//    }
 
     class CarouselHolder extends RecyclerView.ViewHolder {
         //@BindView(R.id.view_pager)

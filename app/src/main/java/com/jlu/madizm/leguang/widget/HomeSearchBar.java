@@ -1,6 +1,7 @@
 package com.jlu.madizm.leguang.widget;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -25,6 +26,22 @@ public class HomeSearchBar extends RelativeLayout {
         super(context);
         initView(context);
     }
+
+    public HomeSearchBar(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        initView(context);
+    }
+
+    public HomeSearchBar(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        initView(context);
+    }
+
+    public HomeSearchBar(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        initView(context);
+    }
+
     private void initView(final Context context){
         View view = LayoutInflater.from(context).inflate(R.layout.item_home_type_search, this, true);
         mSearchText = view.findViewById(R.id.edText_search);

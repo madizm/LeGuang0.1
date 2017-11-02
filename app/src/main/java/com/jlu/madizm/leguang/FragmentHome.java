@@ -17,6 +17,7 @@ import com.jlu.madizm.leguang.model.entity.HomeBottom;
 import com.jlu.madizm.leguang.model.entity.HomeTop;
 import com.jlu.madizm.leguang.presenter.HomePresenter;
 import com.jlu.madizm.leguang.utils.ToastUtil;
+import com.jlu.madizm.leguang.widget.HomeSearchBar;
 import com.jlu.madizm.leguang.widget.LoadMoreRecyclerView;
 
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class FragmentHome extends Fragment
     SwipeRefreshLayout refreshLayout;
 //    @BindView(R.id.recycler_view)
     LoadMoreRecyclerView recyclerView;
+    HomeSearchBar mSearchBar;
     private Context context;
     private Activity activity;
 
@@ -59,6 +61,7 @@ public class FragmentHome extends Fragment
 //        ButterKnife.bind(this, view);
         refreshLayout = view.findViewById(R.id.refresh_layout);
         recyclerView = view.findViewById(R.id.recycler_view);
+        mSearchBar = view.findViewById(R.id.home_search_bar);
 
         activity = getActivity();
         context = activity.getApplicationContext();

@@ -96,7 +96,7 @@ public class HomeModelImpl implements HomeLoadModel {
 
         //////////////////////////////
         List<HomeBase> list = new ArrayList<>();
-        list.add(new HomeBase(0,0,"","",HomeBase.TYPE_HOME_SEARCH_BAR,spanCount));
+        //list.add(new HomeBase(0,0,"","",HomeBase.TYPE_HOME_SEARCH_BAR,spanCount));
         //list添加轮播图片
         list.add(new HomeBase(0, 0, "", "", HomeBase.TYPE_CAROUSEL, spanCount));
         //list添加分类
